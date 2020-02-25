@@ -1,0 +1,41 @@
+<!-- This app will present user with 3 color choices per question, user chooses one color each time, and at the end, is presented with the results.  
+This is practice for traversing the DOM.
+App will have opening box introducing quiz, disappears when quiz starts
+Question at top will stay the same - "Which color do you prefer?"
+Color choices will be in radio
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Choice app</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id = "opening-container">
+      <h1>Welcome to the most important quiz of your life.</h1>
+      <button id = "opening-button">Continue</button>
+  </div>
+  <div id = "quiz-container" class = "hide-on-start">
+    <div id = "question-container">
+      <h2>Which color do you like best?</h2>
+    </div>
+    <div id = "color-container">
+    </div>
+    <button id = "submit-color">Submit</button>
+  </div>
+  <div id = "results-container" class = "hide-on-start">
+    <h2>Your favorite colors are...</h2>
+    <ul id = "results-list">
+
+    </ul>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src = "index.js"></script>
+</body>
+</html>
