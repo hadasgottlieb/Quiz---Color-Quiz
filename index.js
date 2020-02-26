@@ -71,15 +71,27 @@ function renderResults() {
   $("#quiz-container").hide();
   $("#results-container").removeClass("hide-on-start");
   STORE.resultsArray.forEach(function(choice) {
-    $("#results-list").append(`<li class = "${choice}">${choice}</li>`);
+    $("#results-list").append(`<li class = "${choice} color-options results-style">${choice}</li>`);
   });
 
 }
+
+// //This function starts the quiz over
+// function startOver() {
+//   $("#restart-button").on("click", function() {
+//     $("#color-container").html("");
+//     $("#results-list").html("");
+//     $("#opening-container").show();
+//     $("#results-container").addClass("hide-on-start");
+//     STORE.currentQuestionIndex = 0;
+//   });
+// }
 
 
 function renderPage() {
   startQuiz();
   submitColor();
+  // startOver();
 }
 
 $(renderPage);
